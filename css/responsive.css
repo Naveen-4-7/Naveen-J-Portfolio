@@ -1,0 +1,126 @@
+/* Responsive Styles */
+
+/* Navigation for Tablet & Mobile */
+@media (max-width: 920px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-card);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 16px 0;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .nav-links a.active::after {
+        display: none;
+    }
+}
+
+/* Tablet and smaller desktop */
+@media (max-width: 992px) {
+    .education-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-image img {
+        width: 270px;
+        height: 270px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.75rem;
+        min-height: auto;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.85rem;
+    }
+
+    /* Education Section */
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Quick Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Experience Cards */
+    .experience-card {
+        flex-direction: column;
+    }
+
+    .experience-image {
+        flex: none;
+        width: 100%;
+        height: 250px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-title {
+        font-size: 2.25rem;
+    }
+}
